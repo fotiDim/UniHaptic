@@ -15,11 +15,11 @@ Use Swift Package Manager though Xcode 11. Simply go to `File -> Swift Packages 
 # Usage
 The API is meant to be as simple as possible. First do your import:
 
-```
+```swift
 import UniHaptic
 ```
 and then simply call it:
-```
+```swift
 UniHaptic().vibrate()
 ```
 
@@ -32,7 +32,7 @@ You can have more control by initializing the `UniHaptic` class with a specific 
 If you don't provide any option the default will be `.selection`. 
 
 You also have the option to provice specific `intensity` and `sharpness` to vibrate:
-```
+```swift
 UniHaptic().vibrate(intensity: 0.7, sharpness: 0.7)
 ```
 
@@ -41,7 +41,7 @@ Sharpness is only used if `UniHaptic` was initialized with `.custom` style.
 # Minimize Latency
 The above example while being simple it does not provide the lowest possible latency. To get minimal latency initialize Unihaptic in a separate call and store its instance:
 
-```
+```swift
 class MyClass {
     var unihaptic = UniHaptic()
 
